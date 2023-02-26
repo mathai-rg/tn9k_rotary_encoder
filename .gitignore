@@ -1,0 +1,6 @@
+/impl
+
+*.vcd
+*_tb.v
+*.out
+*.ps1

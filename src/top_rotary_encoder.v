@@ -1,0 +1,1 @@
+//reads a rotar encoder and updates a register
