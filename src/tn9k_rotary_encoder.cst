@@ -1,0 +1,31 @@
+
+
+//SYSTEM CLOCK INPUT
+//uses on board 27 MHz Oscillator
+IO_LOC "clk" 52;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+//SYSTEM_RESET INPUT
+//uses on board switch S2
+IO_LOC "rstn" 3;
+IO_PORT "rstn" PULL_MODE=UP;
+
+
+IO_LOC "count_out[0]" 10;
+IO_PORT "count_out[0]" PULL_MODE=DOWN DRIVE=8;
+IO_LOC "count_out[1]" 11;
+IO_PORT "count_out[1]" PULL_MODE=DOWN DRIVE=8;
+IO_LOC "count_out[2]" 13;
+IO_PORT "count_out[2]" PULL_MODE=DOWN DRIVE=8;
+IO_LOC "count_out[3]" 14;
+IO_PORT "count_out[3]" PULL_MODE=DOWN DRIVE=8;
+IO_LOC "count_out[4]" 15;
+IO_PORT "count_out[4]" PULL_MODE=DOWN DRIVE=8;
+IO_LOC "count_out[5]" 16;
+IO_PORT "count_out[5]" PULL_MODE=DOWN DRIVE=8;
+
+IO_LOC "in_a" 31;
+IO_PORT "in_a" PULL_MODE=UP;
+
+IO_LOC "in_b" 32;
+IO_PORT "in_b" PULL_MODE=UP;
