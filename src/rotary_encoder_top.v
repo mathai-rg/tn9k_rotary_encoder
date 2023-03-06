@@ -7,11 +7,16 @@ module rotary_encoder(
     input rstn,
     input clk,
     //outputs
-    output reg [5:0] count_out );
+    output reg [3:0] count_out,
+    output out_a,
+    output out_b);
 
 wire in_a_db;
 wire in_b_db;
 wire in_a_rise;
+
+assign out_a = in_a;
+assign out_b = in_b;
 
 debounce dbnce_a(
     .sw_in(in_a),
@@ -31,7 +36,7 @@ debounce dbnce_b(
 
 always @(posedge clk or negedge rstn) begin
     if(!rstn) begin
-        count_out <= 0;
+        count_out <= 4'b0000;
     end
     else begin
         if(in_a_rise) begin

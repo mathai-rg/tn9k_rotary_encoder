@@ -11,14 +11,14 @@ module debounce(
     output reg sw_out );
 
 reg [1:0] sw_shift;
-reg [10:0] bounce_count;
+reg [15:0] bounce_count;
 
 always @(posedge clk or negedge rstn) begin
     if(!rstn) begin
         sw_shift <= 2'b00;
     end
     else begin
-        sw_shift <= {sw_shift, sw_in};
+        sw_shift <= {sw_shift[0], sw_in};
     end
 end
 
@@ -35,7 +35,7 @@ always @(posedge clk or negedge rstn) begin
             sw_out <= sw_shift[0];
 
             if(sw_shift[1] != sw_shift[0]) begin
-                bounce_count <= 1023;
+                bounce_count <= 16'd65535;
             end
         end
         else begin

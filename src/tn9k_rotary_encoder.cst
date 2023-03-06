@@ -19,10 +19,10 @@ IO_LOC "count_out[2]" 13;
 IO_PORT "count_out[2]" PULL_MODE=DOWN DRIVE=8;
 IO_LOC "count_out[3]" 14;
 IO_PORT "count_out[3]" PULL_MODE=DOWN DRIVE=8;
-IO_LOC "count_out[4]" 15;
-IO_PORT "count_out[4]" PULL_MODE=DOWN DRIVE=8;
-IO_LOC "count_out[5]" 16;
-IO_PORT "count_out[5]" PULL_MODE=DOWN DRIVE=8;
+IO_LOC "out_a" 15;
+IO_PORT "out_a" PULL_MODE=DOWN DRIVE=8;
+IO_LOC "out_b" 16;
+IO_PORT "out_b" PULL_MODE=DOWN DRIVE=8;
 
 IO_LOC "in_a" 31;
 IO_PORT "in_a" PULL_MODE=UP;
